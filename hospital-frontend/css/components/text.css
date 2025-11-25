@@ -1,0 +1,17 @@
+.titulo-home {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--grisSombra);
+    text-align: center;
+}
+
+.welcome-box p {
+    margin-top: 10px;
+    font-size: 17px;
+    color: #444;
+}
+.card p {
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+}

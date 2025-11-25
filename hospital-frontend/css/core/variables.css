@@ -1,0 +1,19 @@
+:root{
+    /*Colores principales*/
+    --azulPrimario: #4F7CAC;
+    --azulSecundario: #8cbde0;
+
+    /*Colores secundarios*/
+    --verdeMenta: #74C69D;
+    --verdeCesped: #52A27C;
+
+
+    /*Color neutro*/
+    --fondoClarito: #F9FAFB;
+    --grisNeutro: #E1E5EA;
+    --grisSombra: #1D1E22;
+
+    /*Tipografias*/
+    --letraLogin: "Inter", sans-serif;
+
+}

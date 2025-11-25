@@ -1,0 +1,57 @@
+/*
+    TARJETAS LOGIN
+*/
+.login-card {
+    background-color: white;
+    width: 340px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(29, 30, 34, 0.15);
+}
+
+.login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: var(--azulPrimario);
+    font-weight: 600;
+}
+
+/*
+* TARJETAS DE LA PAGINA DE INICIO/CITAS
+*/
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .10);
+    text-align: center;
+    transition: .25s;
+    cursor: pointer;
+    border: 1px solid var(--grisNeutro);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--azulPrimario);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: var(--azulPrimario);
+    text-decoration: none;
+}
+
+.card p {
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+}

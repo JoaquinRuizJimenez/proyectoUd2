@@ -1,0 +1,23 @@
+.image-citaBorrar{
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+.image-citaBorrar:hover{
+    visibility: visible;
+    width: 28px;
+    height: 28px;
+}
+.image-citaModificar{
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+.image-citaModificar:hover{
+    visibility: visible;
+    width: 28px;
+    height: 28px;
+}
