@@ -7,6 +7,7 @@
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(29, 30, 34, 0.15);
+    justify-self: center;
 }
 
 .login-title {
@@ -36,22 +37,48 @@
     transition: .25s;
     cursor: pointer;
     border: 1px solid var(--grisNeutro);
+
+    .image-citaBorrar{
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .image-citaModificar{
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
 }
+
+
 
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--azulPrimario);
     box-shadow: 0 6px 14px rgba(0, 0, 0, .15);
+
+    .image-citaBorrar{
+        visibility: visible;
+        opacity: 100;
+        transition: opacity 0.3s;
+    }
+    .image-citaModificar{
+        visibility: visible;
+        opacity: 100;
+        transition: opacity 0.3s;
+    }
 }
 
 .card h3 {
     margin-bottom: 10px;
     color: var(--azulPrimario);
     text-decoration: none;
+    font-family: var(--typoTems);
 }
 
 .card p {
     color: #555;
     font-size: 14px;
     text-decoration: none;
+    font-weight: bold;
 }

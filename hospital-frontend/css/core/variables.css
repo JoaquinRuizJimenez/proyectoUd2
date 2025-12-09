@@ -8,12 +8,14 @@
     --verdeCesped: #52A27C;
 
 
+
     /*Color neutro*/
     --fondoClarito: #F9FAFB;
     --grisNeutro: #E1E5EA;
     --grisSombra: #1D1E22;
 
     /*Tipografias*/
-    --letraLogin: "Inter", sans-serif;
-
+    --letraLogin: "Poppins", sans-serif;
+    --typoGeneral: 'Monocraft';
+    --typoTems: 'Trebuchet MS', sans-serif;
 }

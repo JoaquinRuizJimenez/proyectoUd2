@@ -3,6 +3,7 @@
     margin-bottom: 20px;
     color: var(--grisSombra);
     text-align: center;
+    font-family: var(--typoTems);
 }
 
 .welcome-box p {
