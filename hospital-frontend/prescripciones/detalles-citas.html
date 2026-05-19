@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de cita</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+ 
+    <nav class="nav-paginaPrincipal">
+        <div class="nav-logo">Hospital Primeros Pasos</div>
+        <div class="nav-links">
+            <a href="../home.html">Inicio</a>
+            <a href="lista-citas.html">Citas</a>
+            <a href="pacientes.html">Pacientes</a>
+            <a href="historial.html">Historial</a>
+            <a href="configuracion.html">Configuración</a>
+        </div>
+    </nav>
+ 
+    <div class="container">
+        <h1 class="titulo-home">Detalle de cita</h1>
+ 
+        <div class="welcome-box">
+            <h3>Joaquin Ruiz Jimenez</h3>
+            <p>09/12/2025 · 10:30 · Dra. Banchero · Medicina interna</p>
+            <p>Consulta 06, Planta 7</p>
+        </div>
+ 
+        <h2 class="titulo-home" style="font-size: 22px; margin-top: 32px;">Registro de prescripción</h2>
+ 
+        <div class="welcome-box">
+            <form class="form">
+ 
+                <div class="form-group">
+                    <label for="motivo">Motivo de consulta</label>
+                    <input type="text" id="motivo" class="input" placeholder="Ej: El paciente presenta un fuerte dolor de cabeza y mucosidad alta">
+                </div>
+ 
+                <div class="form-group">
+                    <label for="diagnostico">Diagnóstico</label>
+                    <input type="text" id="diagnostico" class="input" placeholder="Ej: Resfriado comun">
+                </div>
+ 
+                <div class="form-group">
+                    <label for="medicamento">Medicamento</label>
+                    <input type="text" id="medicamento" class="input" placeholder="Ej: Paracetamol 1gr · 1 pastilla/8 horas · 2 semanas">
+                </div>
+ 
+                <div class="form-group">
+                    <label for="pruebas">Pruebas solicitadas</label>
+                    <input type="text" id="pruebas" class="input" placeholder="Ej: Ninguna/ Test de schrodinger">
+                </div>
+ 
+                <div class="form-group">
+                    <label for="proxima">Próxima revisión</label>
+                    <input type="date" id="proxima" class="input">
+                </div>
+ 
+                <div class="form-group">
+                    <label for="observaciones">Observaciones</label>
+                    <input type="text" id="observaciones" class="input" placeholder="Observaciones adicionales...">
+                </div>
+ 
+                <button type="submit" class="btn-registrarse">Guardar prescripción</button>
+                <a href="lista-citas.html"><button type="button" class="btn-login">Cancelar</button></a>
+ 
+            </form>
+        </div>
+ 
+    </div>
+ 
+</body>
+</html>
