@@ -32,3 +32,18 @@
 .btn-registrarse:hover {
     background: var(--verdeMenta);
 }
+
+/* Boton ordenar de pacientes.html */
+.boton-ordenar {
+    background-color: var(--azulPrimario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.boton-ordenar:hover {
+    background-color: var(--azulOscuro);
+}
