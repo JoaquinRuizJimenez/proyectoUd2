@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de pacientes</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+ 
+    <nav class="nav-paginaPrincipal">
+        <div class="nav-logo">Hospital Primeros Pasos</div>
+        <div class="nav-links">
+            <a href="../home.html">Inicio</a>
+            <a href="lista-citas.html">Citas</a>
+            <a href="pacientes.html">Pacientes</a>
+            <a href="../urgencias/registro-urgencias.html">Urgencias</a>
+        </div>
+    </nav>
+ 
+    <div class="container">
+ 
+        <h1 class="titulo-home">Búsqueda de pacientes</h1>
+        <p class="card">Pacientes sin cita asignada</p>
+ 
+        <div class="welcome-box">
+            <form class="form">
+                <div class="form-group">
+                    <label for="nombre">Nombre del paciente</label>
+                    <input type="text" id="nombre" class="input" placeholder="Ej: Ethan Winters">
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" class="input" placeholder="Ej: 01234567B">
+                </div>
+                <div class="form-group">
+                    <label for="sip">Número Tarjeta Sanitaria</label>
+                    <input type="text" id="sip" class="input" placeholder="Ej: AN-XXXXXXXXXX">
+                </div>
+                <button type="submit" class="btn-login">Buscar</button>
+            </form>
+        </div>
+ 
+
+        <div class="cards">
+ 
+            <span class="card">
+                <h3>Maria Garcia Lopez</h3>
+                <p>DNI: 48392011-K</p>
+                <p>Sin cita asignada</p>
+                <a href="detalle-cita.html"><img src="img/lapiz.png" class="image-citaModificar"></a>
+                <a><img src="img/borrar.png" class="image-citaBorrar"></a>
+            </span>
+ 
+            <span class="card">
+                <h3>Carlos Ruiz Perez</h3>
+                <p>DNI: 30291847-A</p>
+                <p>Sin cita asignada</p>
+                <a href="detalle-cita.html"><img src="img/lapiz.png" class="image-citaModificar"></a>
+                <a><img src="img/borrar.png" class="image-citaBorrar"></a>
+            </span>
+ 
+            <span class="card">
+                <h3>Ana Martinez Vega</h3>
+                <p>DNI: 52018374-B</p>
+                <p>Sin cita asignada</p>
+                <a href="detalle-cita.html"><img src="img/lapiz.png" class="image-citaModificar"></a>
+                <a><img src="img/borrar.png" class="image-citaBorrar"></a>
+            </span>
+ 
+            <span class="card">
+                <h3>Luis Fernandez Mora</h3>
+                <p>DNI: 71928304-C</p>
+                <p>Sin cita asignada</p>
+                <a href="detalle-cita.html"><img src="img/lapiz.png" class="image-citaModificar"></a>
+                <a><img src="img/borrar.png" class="image-citaBorrar"></a>
+            </span>
+ 
+        </div>
+ 
+    </div>
+ 
+</body>
+</html>
