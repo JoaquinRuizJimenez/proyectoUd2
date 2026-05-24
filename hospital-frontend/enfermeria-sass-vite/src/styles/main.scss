@@ -1,4 +1,29 @@
-@use 'variables';
-@use 'layout';
+@use '_variables' as *;
+@use '_layout';
 @use 'style';
-@use 'components';
+@use '_components';
+
+:root {
+    --azulPrimario   : #{$azul-primario};
+    --azulSecundario : #{$azul-secundario};
+    --verdeMenta     : #{$verde-menta};
+    --verdeCesped    : #{$verde-cesped};
+    --fondoClarito   : #{$fondo-clarito};
+    --grisNeutro     : #{$gris-neutro};
+    --grisSombra     : #{$gris-sombra};
+    --letraLogin     : 'Poppins', sans-serif;
+    --typoGeneral    : 'Monocraft';
+    --typoTems       : 'Trebuchet MS', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: $fondo-clarito;
+    min-height: 100vh;
+}

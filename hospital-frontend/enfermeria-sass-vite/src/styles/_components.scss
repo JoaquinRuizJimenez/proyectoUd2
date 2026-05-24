@@ -1,0 +1,274 @@
+@use '_variables.scss' as *;
+@use '_layout.scss' as *; 
+@use 'sass:color';
+
+
+// ── 6. NAV ───────────────────────────────────────────────────
+
+.nav-paginaPrincipal {
+    width: 100%;
+    background: $azul-primario;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    font-family: var(--typoGeneral);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: .2s;
+        font-family: var(--typoGeneral);
+
+        &:hover { color: $verde-menta; }
+    }
+}
+
+
+// ── 7. CARDS ─────────────────────────────────────────────────
+
+.login-card {
+    background-color: white;
+    width: 340px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(29, 30, 34, 0.15);
+    justify-self: center;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: $azul-primario;
+    font-weight: 600;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .10);
+    text-align: center;
+    transition: .25s;
+    cursor: pointer;
+    border: 1px solid $gris-neutro;
+
+    .image-citaBorrar,
+    .image-citaModificar {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        border-color: $azul-primario;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, .15);
+
+        .image-citaBorrar,
+        .image-citaModificar {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        color: $azul-primario;
+        text-decoration: none;
+        font-family: var(--typoTems);
+    }
+
+    p {
+        color: #555;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+
+// ── 8. BOTONES ───────────────────────────────────────────────
+
+.btn-login {
+    padding: 12px;
+    width: 100%;
+    background: $azul-primario;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .2s;
+
+    &:hover { background: $azul-secundario; }
+}
+
+.btn-registrarse {
+    padding: 12px;
+    width: 100%;
+    background: $verde-cesped;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .2s;
+
+    &:hover { background: $verde-menta; }
+}
+
+
+// ── 9. FORMULARIOS ───────────────────────────────────────────
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 14px;
+    color: $gris-sombra;
+    font-weight: 500;
+}
+
+.input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid $gris-neutro;
+    background: $fondo-clarito;
+    transition: .2s;
+
+    &:focus {
+        outline: none;
+        border-color: $azul-primario;
+        box-shadow: 0 0 0 2px rgba(79, 124, 172, .25);
+    }
+}
+
+
+// ── 10. TEXTO ────────────────────────────────────────────────
+
+.titulo-home {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: $gris-sombra;
+    text-align: center;
+    font-family: var(--typoTems);
+}
+
+
+// ── 11. IMÁGENES ─────────────────────────────────────────────
+
+.image-citaBorrar {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    transition: 0.3s;
+
+    &:hover { width: 28px; height: 28px; }
+}
+
+.image-citaModificar {
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: 0.3s;
+
+    &:hover { width: 28px; height: 28px; }
+}
+
+.leyenda {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    &__dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+
+        &--libre     { background: $cama-libre-txt; }
+        &--ocupada   { background: $cama-ocupada-txt; }
+        &--limpieza  { background: $cama-limpieza-txt; }
+        &--reservada { background: $cama-reservada-txt; }
+    }
+}
+
+.planta {
+    @include panel;
+    margin-bottom: 28px;
+
+    &__cabecera {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+        border-bottom: 2px solid $gris-neutro;
+    }
+
+    &__titulo {
+        font-size: 17px;
+        font-weight: 700;
+        color: $azul-primario;
+    }
+
+    &__resumen {
+        font-size: 12px;
+        color: #888;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+}
+
+

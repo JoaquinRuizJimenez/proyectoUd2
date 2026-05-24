@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de camas · Enfermería</title>
+    <link rel="stylesheet" href="./styles/main.scss">
+</head>
+<body>
+
+    <nav class="nav-paginaPrincipal">
+        <div class="nav-logo">Hospital Primeros Pasos</div>
+        <div class="nav-links">
+            <a href="../home.html">Inicio</a>
+            <a href="mapa-camas.html">Camas</a>
+            <a href="hoja-medicacion.html">Medicación</a>
+            <a href="../prescripciones/lista-citas.html">Citas</a>
+            <a href="../configuracion.html">Configuración</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1 class="titulo-home" style="text-align:left;">Mapa de camas</h1>
+
+        <div class="leyenda">
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--libre"></span> Libre
+            </div>
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--ocupada"></span> Ocupada
+            </div>
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--limpieza"></span> En limpieza
+            </div>
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--reservada"></span> Reservada
+            </div>
+        </div>
+
+        <!-- Primera planta -->
+        <div class="planta">
+            <div class="planta__cabecera">
+                <span class="planta__titulo">Planta 1 — Medicina General</span>
+                <span class="planta__resumen">3 libres · 5 ocupadas · 1 limpieza · 1 reservada</span>
+            </div>
+            <div class="planta__grid">
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">101</div>
+                    <div class="cama__paciente">M. Garcia Lopez</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--libre">
+                    <div class="cama__numero">102</div>
+                    <div class="cama__paciente">—</div>
+                    <span class="cama__estado">Libre</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">103</div>
+                    <div class="cama__paciente">C. Ruiz Perez</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--limpieza">
+                    <div class="cama__numero">104</div>
+                    <div class="cama__paciente">—</div>
+                    <span class="cama__estado">Limpieza</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">105</div>
+                    <div class="cama__paciente">A. Martinez</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--libre">
+                    <div class="cama__numero">106</div>
+                    <div class="cama__paciente">—</div>
+                    <span class="cama__estado">Libre</span>
+                </div>
+
+                <div class="cama cama--reservada">
+                    <div class="cama__numero">107</div>
+                    <div class="cama__paciente">Ingreso previsto</div>
+                    <span class="cama__estado">Reservada</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">108</div>
+                    <div class="cama__paciente">L. Fernandez</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">109</div>
+                    <div class="cama__paciente">P. Navarro Gil</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--libre">
+                    <div class="cama__numero">110</div>
+                    <div class="cama__paciente">—</div>
+                    <span class="cama__estado">Libre</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Segunda planta -->
+        <div class="planta">
+            <div class="planta__cabecera">
+                <span class="planta__titulo">Planta 2 — Traumatología</span>
+                <span class="planta__resumen">2 libres · 4 ocupadas · 0 limpieza · 2 reservadas</span>
+            </div>
+            <div class="planta__grid">
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">201</div>
+                    <div class="cama__paciente">R. Soler Vega</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">202</div>
+                    <div class="cama__paciente">J. Molina Roca</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--libre">
+                    <div class="cama__numero">203</div>
+                    <div class="cama__paciente">—</div>
+                    <span class="cama__estado">Libre</span>
+                </div>
+
+                <div class="cama cama--reservada">
+                    <div class="cama__numero">204</div>
+                    <div class="cama__paciente">Ingreso previsto</div>
+                    <span class="cama__estado">Reservada</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">205</div>
+                    <div class="cama__paciente">T. Blanco Mir</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+                <div class="cama cama--reservada">
+                    <div class="cama__numero">206</div>
+                    <div class="cama__paciente">Ingreso previsto</div>
+                    <span class="cama__estado">Reservada</span>
+                </div>
+
+                <div class="cama cama--libre">
+                    <div class="cama__numero">207</div>
+                    <div class="cama__paciente">—</div>
+                    <span class="cama__estado">Libre</span>
+                </div>
+
+                <div class="cama cama--ocupada">
+                    <div class="cama__numero">208</div>
+                    <div class="cama__paciente">E. Castro Ramos</div>
+                    <span class="cama__estado">Ocupada</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

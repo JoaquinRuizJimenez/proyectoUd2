@@ -1,0 +1,22 @@
+@use 'sass:color';
+
+// Mismos colores que en el css de prescripciones
+$azul-primario   : #4F7CAC;
+$azul-secundario : #8cbde0;
+$verde-menta     : #74C69D;
+$verde-cesped    : #52A27C;
+$fondo-clarito   : #F9FAFB;
+$gris-neutro     : #E1E5EA;
+$gris-sombra     : #1D1E22;
+$typo-tems       : 'Trebuchet MS', sans-serif;
+
+
+// Variables adicionales me voy a volver loco
+$cama-libre-bg    : #D1FAE5;
+$cama-libre-txt   : #065F46;
+$cama-ocupada-bg  : #FEE2E2;
+$cama-ocupada-txt : #991B1B;
+$cama-limpieza-bg : #FEF9C3;
+$cama-limpieza-txt: #713F12;
+$cama-reservada-bg : #E0E7FF;
+$cama-reservada-txt: #3730A3;
