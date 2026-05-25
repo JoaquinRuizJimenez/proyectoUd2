@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de medicación · Enfermería</title>
+    <link rel="stylesheet" href="./styles/hoja-medicacion.scss">
+</head>
+<body>
+ 
+    <nav class="nav">
+        <div class="nav__logo">Hospital Primeros Pasos</div>
+        <div class="nav__links">
+            <!-- 
+                No funcionan los enlaces que refieren a otras paginas por el tema de esta conectado en localhost en lugar
+                de estar directamente con el archivo abierto :(
+
+                Camas manda a mapa-camas.html que estaen el mismo asi que si funciona y Medicacion manda a hoja-medicacion.html que es en
+                el que ya esta.
+            -->
+            <a href="../../home.html">Inicio</a>
+            <a href="mapa-camas.html">Camas</a>
+            <a href="hoja-medicacion.html">Medicación</a>
+            <a href="../../prescripciones/lista-citas.html">Citas</a>
+        </div>
+    </nav>
+ 
+    <div class="container">
+ 
+        <h1 class="titulo">Hoja de medicación</h1>
+        <p class="subtitulo">Registro de administración de medicamentos del turno actual</p>
+ 
+        <div class="ficha">
+            <div class="ficha__datos">
+                <span class="ficha__nombre">Joaquin Ruiz Jimenez</span>
+                <span class="ficha__detalle">DNI: 01234567A &nbsp;·&nbsp; SIP: 00192847</span>
+                <span class="ficha__detalle">Fecha de nacimiento: 25/12/2004 (21 años)</span>
+                <span class="ficha__detalle">Alergias: <strong>Penicilina</strong></span>
+            </div>
+            <div class="ficha__cama">
+                <span>Cama</span>
+                <span>505</span>
+            </div>
+        </div>
+ 
+        <div class="leyenda">
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--dado"></span> Administrado
+            </div>
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--pendiente"></span> Pendiente
+            </div>
+            <div class="leyenda__item">
+                <span class="leyenda__dot leyenda__dot--omitido"></span> Omitido
+            </div>
+        </div>
+ 
+        <!-- TABLA TURNO -->
+        <div class="tabla-panel">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Medicamento</th>
+                        <th>Dosis</th>
+                        <th>Vía</th>
+                        <th>Hora</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tabla__medicamento">Lidocail 40mg</td>
+                        <td class="tabla__dosis">1 comprimido</td>
+                        <td>Oral</td>
+                        <td>08:00</td>
+                        <td><span class="badge badge--dado">Administrado</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tabla__medicamento">Paracetamol 1g</td>
+                        <td class="tabla__dosis">1 comprimido</td>
+                        <td>Oral</td>
+                        <td>08:00</td>
+                        <td><span class="badge badge--dado">Administrado</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tabla__medicamento">Ibuprofeno 600mg</td>
+                        <td class="tabla__dosis">1 cápsula</td>
+                        <td>Oral</td>
+                        <td>09:00</td>
+                        <td><span class="badge badge--dado">Administrado</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tabla__medicamento">Loratadina 10mg</td>
+                        <td class="tabla__dosis">1 comprimido</td>
+                        <td>Oral</td>
+                        <td>13:00</td>
+                        <td><span class="badge badge--pendiente">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tabla__medicamento">Frenadol 200mg</td>
+                        <td class="tabla__dosis">1 comprimido</td>
+                        <td>Oral</td>
+                        <td>14:00</td>
+                        <td><span class="badge badge--pendiente">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="tabla__medicamento">Ibuprofeno 600mg</td>
+                        <td class="tabla__dosis">1 comprimido</td>
+                        <td>Oral</td>
+                        <td>10:00</td>
+                        <td><span class="badge badge--omitido">Omitido</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+ 
+        <div class="observaciones">
+            <p class="observaciones__titulo">Observaciones del turno</p>
+            <textarea placeholder="Añade observaciones sobre la administración o el estado del paciente..."></textarea>
+        </div>
+ 
+        <!-- BOTONES -->
+        <div class="acciones">
+            <a href="mapa-camas.html">
+                <button class="btn btn--secundario">Volver al mapa</button>
+            </a>
+            <button class="btn btn--primario" onclick="alert('Hoja guardada correctamente.')">
+                Guardar hoja
+            </button>
+        </div>
+ 
+    </div>
+ 
+</body>
+</html>
+ 

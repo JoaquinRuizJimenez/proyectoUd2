@@ -1,0 +1,363 @@
+@use 'sass:color';
+
+// Voy a hacer todo el .scss en un solo archivo para mantenerlo simple y fácil de seguir, 
+//pero en otro proyecto  lo dividiría en varios archivos (variables, mixins, componentes, etc.) y 
+//los importaría desde un archivo principal.
+
+// Realmente no son muy diferentes los estilos de mapa-camas.html a los de hoja-medicacion.html, pero bueno
+
+
+// VARIABLES 
+
+$azul-primario   : #4F7CAC;
+$azul-secundario : #8cbde0;
+$verde-menta     : #74C69D;
+$verde-cesped    : #52A27C;
+$fondo-clarito   : #F9FAFB;
+$gris-neutro     : #E1E5EA;
+$gris-sombra     : #1D1E22;
+
+// Estados de medicación
+$estado-pendiente-bg  : #FEF9C3;
+$estado-pendiente-txt : #713F12;
+$estado-dado-bg       : #D1FAE5;
+$estado-dado-txt      : #065F46;
+$estado-omitido-bg    : #FEE2E2;
+$estado-omitido-txt   : #991B1B;
+
+
+// MIXINS 
+
+@mixin panel {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid $gris-neutro;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+    padding: 24px;
+}
+
+@mixin badge($bg, $txt) {
+    display: inline-block;
+    background: $bg;
+    color: $txt;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+
+// RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: $fondo-clarito;
+    min-height: 100vh;
+}
+
+
+//  NAV 
+
+.nav {
+    width: 100%;
+    background: $azul-primario;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    
+    // Esto debería importar bien la fuente de monocraft bien pero no entiendo porque no la cambia
+    @font-face {
+        font-family: 'Monocraft';
+        src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/dist/Monocraft-ttf/Monocraft.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    &__logo {
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: .5px;
+    }
+
+    &__links {
+        display: flex;
+        gap: 20px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: .2s;
+
+            &:hover   { color: $verde-menta; }
+        }
+    }
+}
+
+
+// LAYOUT 
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: 700;
+    color: $gris-sombra;
+    margin-bottom: 4px;
+}
+
+.subtitulo {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 28px;
+}
+
+
+// la ficha del paciente 
+
+.ficha {
+    @include panel;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+
+    &__datos {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__nombre {
+        font-size: 18px;
+        font-weight: 700;
+        color: $azul-primario;
+    }
+
+    &__detalle {
+        font-size: 13px;
+        color: #777;
+    }
+
+    &__cama {
+        background: $azul-primario;
+        color: white;
+        border-radius: 10px;
+        padding: 12px 20px;
+        text-align: center;
+
+        span:first-child {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            opacity: .8;
+            margin-bottom: 2px;
+        }
+
+        span:last-child {
+            font-size: 22px;
+            font-weight: 800;
+        }
+    }
+}
+
+
+// LEYENDA 
+
+.leyenda {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    &__dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+
+        &--pendiente { background: $estado-pendiente-txt; }
+        &--dado      { background: $estado-dado-txt; }
+        &--omitido   { background: $estado-omitido-txt; }
+    }
+}
+
+
+// TABLAS DE MEDICACIÓN 
+
+.tabla-panel {
+    @include panel;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+
+    thead {
+        background: $azul-primario;
+        color: white;
+
+        th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: .3px;
+
+            &:last-child { text-align: center; }
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid $gris-neutro;
+            transition: background .15s;
+
+            &:last-child { border-bottom: none; }
+            &:hover      { background: color.adjust($fondo-clarito, $lightness: -2%); }
+        }
+
+        td {
+            padding: 14px 16px;
+            color: $gris-sombra;
+            vertical-align: middle;
+
+            &:last-child { text-align: center; }
+        }
+    }
+
+    // Medicamento destacado (ej: el que se está administrando en ese momento)
+    &__medicamento {
+        font-weight: 700;
+        color: $azul-primario !important;
+    }
+
+    &__dosis {
+        font-size: 13px;
+        color: #777 !important;
+    }
+}
+
+
+//  BADGES DE ESTADO 
+
+.badge {
+    &--pendiente { @include badge($estado-pendiente-bg, $estado-pendiente-txt); }
+    &--dado      { @include badge($estado-dado-bg,      $estado-dado-txt); }
+    &--omitido   { @include badge($estado-omitido-bg,   $estado-omitido-txt); }
+}
+
+
+// OBSERVACIONES 
+
+.observaciones {
+    @include panel;
+
+    &__titulo {
+        font-size: 15px;
+        font-weight: 700;
+        color: $azul-primario;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $gris-neutro;
+    }
+
+    textarea {
+        width: 100%;
+        border: 1px solid $gris-neutro;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 14px;
+        background: $fondo-clarito;
+        resize: vertical;
+        min-height: 80px;
+        font-family: 'Trebuchet MS', sans-serif;
+        transition: .2s;
+
+        &:focus {
+            outline: none;
+            border-color: $azul-primario;
+            box-shadow: 0 0 0 2px rgba(79, 124, 172, .2);
+        }
+    }
+}
+
+
+// BOTONES 
+
+.acciones {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.btn {
+    padding: 11px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: .2s;
+
+    &--secundario {
+        background: white;
+        color: $gris-sombra;
+        border: 1px solid $gris-neutro;
+
+        &:hover { background: $gris-neutro; }
+    }
+
+    &--primario {
+        background: $verde-cesped;
+        color: white;
+
+        &:hover { background: $verde-menta; }
+    }
+}
+
+
+//  RESPONSIVE (bastante opcional pero bonito tenerlo)
+
+@media (max-width: 700px) {
+    .tabla thead th:nth-child(3),
+    .tabla tbody td:nth-child(3) { display: none; }
+
+    .ficha { flex-direction: column; align-items: flex-start; }
+}
